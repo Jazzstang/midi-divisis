@@ -11,11 +11,13 @@ public:
     ~MainComponent() override;
 
     void addNewTrack();
+    void removeTrack(int index);
     void paint(juce::Graphics&) override;
     void resized() override;
 
 private:
     juce::TextButton addTrackButton { "Ajouter une piste" };
+    juce::TextButton removeTrackButton { "Supprimer la piste" };
 
     // Important : trackContainer doit être détruit **après** les composants qui l’utilisent (comme trackViewport)
     std::unique_ptr<juce::Component> trackContainer;
