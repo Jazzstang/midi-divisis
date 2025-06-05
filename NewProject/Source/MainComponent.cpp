@@ -3,12 +3,14 @@
 MainComponent::MainComponent()
 {
     addAndMakeVisible(addTrackButton);
+    addAndMakeVisible(removeTrackButton);
     addAndMakeVisible(trackViewport);
 
     trackContainer = std::make_unique<juce::Component>();
     trackViewport.setViewedComponent(trackContainer.get(), false);
 
     addTrackButton.onClick = [this]() { addNewTrack(); };
+    removeTrackButton.onClick = [this]() { if (! midiTracks.isEmpty()) removeTrack(midiTracks.size() - 1); };
     addNewTrack();
     setSize(1000, 600);
 }
@@ -28,10 +30,23 @@ void MainComponent::addNewTrack()
     resized();
 }
 
+void MainComponent::removeTrack(int index)
+{
+    if (juce::isPositiveAndBelow(index, midiTracks.size()))
+    {
+        auto* track = midiTracks[index];
+        trackContainer->removeChildComponent(track);
+        midiTracks.remove(index);
+        resized();
+    }
+}
+
 void MainComponent::resized()
 {
     auto area = getLocalBounds().reduced(10);
-    addTrackButton.setBounds(area.removeFromBottom(30));
+    auto buttonsArea = area.removeFromBottom(30);
+    addTrackButton.setBounds(buttonsArea.removeFromLeft(150));
+    removeTrackButton.setBounds(buttonsArea.removeFromLeft(150));
     trackViewport.setBounds(area);
 
     int y = 0;
