@@ -4,6 +4,30 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
   <MAINGROUP id="UjubM0" name="NewProject">
     <GROUP id="{42323B4E-0B2F-08B0-CBEA-56536815FD87}" name="Source">
+      <FILE id="sO8bO6" name="MidiTrackOutputRouting.cpp" compile="1" resource="0"
+            file="Source/MidiTrackOutputRouting.cpp"/>
+      <FILE id="DNCLWm" name="MidiTrackOutputRouting.h" compile="0" resource="0"
+            file="Source/MidiTrackOutputRouting.h"/>
+      <FILE id="fM0hBX" name="MidiTrackArpAdvanced.cpp" compile="1" resource="0"
+            file="Source/MidiTrackArpAdvanced.cpp"/>
+      <FILE id="LAKpfD" name="MidiTrackArpAdvanced.h" compile="0" resource="0"
+            file="Source/MidiTrackArpAdvanced.h"/>
+      <FILE id="VI7xvK" name="MidiTrackArpSettings.cpp" compile="1" resource="0"
+            file="Source/MidiTrackArpSettings.cpp"/>
+      <FILE id="wYCBJM" name="MidiTrackArpSettings.h" compile="0" resource="0"
+            file="Source/MidiTrackArpSettings.h"/>
+      <FILE id="GEZMsc" name="MidiTrackProcessingConfig.cpp" compile="1"
+            resource="0" file="Source/MidiTrackProcessingConfig.cpp"/>
+      <FILE id="TsAcjW" name="MidiTrackProcessingConfig.h" compile="0" resource="0"
+            file="Source/MidiTrackProcessingConfig.h"/>
+      <FILE id="Ltghj6" name="MidiTrackInputConfig.cpp" compile="1" resource="0"
+            file="Source/MidiTrackInputConfig.cpp"/>
+      <FILE id="lkLGyd" name="MidiTrackInputConfig.h" compile="0" resource="0"
+            file="Source/MidiTrackInputConfig.h"/>
+      <FILE id="EY0tKG" name="MidiTrackComponent.cpp" compile="1" resource="0"
+            file="Source/MidiTrackComponent.cpp"/>
+      <FILE id="MvURZW" name="MidiTrackComponent.h" compile="0" resource="0"
+            file="Source/MidiTrackComponent.h"/>
       <FILE id="iHGCkS" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="AfQzWx" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="TEk1kZ" name="MainComponent.cpp" compile="1" resource="0"
