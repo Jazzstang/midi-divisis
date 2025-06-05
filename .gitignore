@@ -1,0 +1,19 @@
+# JUCE / Xcode / macOS
+Builds/
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+.DS_Store
+
+# Binaries
+*.app
+*.o
+*.obj
+*.so
+*.a
+*.dylib
+*.exe
+*.bin
+
+# Temp
+*.jucer~ 
