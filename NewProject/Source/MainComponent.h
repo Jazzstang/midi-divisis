@@ -10,6 +10,7 @@ public:
     MainComponent();
     ~MainComponent() override;
 
+    void addNewTrack();
     void paint(juce::Graphics&) override;
     void resized() override;
 
