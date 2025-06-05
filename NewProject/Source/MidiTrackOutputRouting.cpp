@@ -20,7 +20,7 @@ MidiTrackOutputRouting::MidiTrackOutputRouting()
         addAndMakeVisible(ch);
 
         auto* range = new juce::TextEditor();
-        range->setText(juce::String("C1–C3"), juce::dontSendNotification);  // ✅ sécurisé
+        range->setText(juce::String("C1-C3"), juce::dontSendNotification);  // ✅ sécurisé
         splitRanges.add(range);
         addAndMakeVisible(range);
     }
