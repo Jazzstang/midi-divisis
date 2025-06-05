@@ -10,10 +10,13 @@ public:
     void resized() override;
 
 private:
-    juce::OwnedArray<MidiTrackComponent> tracks;
+    // Declare members in an order that ensures safe destruction. The container
+    // must outlive its dependents to avoid dangling pointers when the component
+    // hierarchy is torn down.
+    juce::Component trackContainer;                 // owns track components
+    juce::Viewport trackViewport;                   // references trackContainer
+    juce::OwnedArray<MidiTrackComponent> tracks;    // child track components
     juce::TextButton addTrackButton { "+" };
-    juce::Viewport trackViewport;
-    juce::Component trackContainer;
 
     void addNewTrack();
 
